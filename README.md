@@ -1,47 +1,99 @@
-# Getting Started with Create React App
+# Chatbot Flow Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A visual editor for creating and managing chatbot conversation flows using React Flow and Tailwind CSS.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Chatbot Flow Builder is a web application that allows you to visually design chatbot conversation flows. It uses React Flow for the interactive flow chart interface and Tailwind CSS for styling.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Drag and drop interface for creating conversation nodes
+- Visual connection between conversation steps
+- Edit node content through a settings panel
+- Save and validate flow configurations
+- Responsive and modern UI with Tailwind CSS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **React**: v19.1.0
+- **TypeScript**: v4.9.5
+- **React Flow**: v11.11.4 - For interactive node-based UI
+- **Tailwind CSS**: v3.4.17 - For styling components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+```text
+src/
+├── components/
+│   ├── FlowBuilder/
+│   │   └── FlowBuilder.tsx - Main component integrating React Flow
+│   ├── Nodes/
+│   │   └── TextNode.tsx - Custom node component for text messages
+│   └── Panels/
+│       ├── NodesPanel.tsx - Panel for dragging new nodes
+│       └── SettingsPanel.tsx - Panel for editing node properties
+├── types/
+│   └── index.ts - TypeScript type definitions
+├── App.tsx - Main application component
+├── index.tsx - Entry point
+└── index.css - Global styles with Tailwind directives
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repository:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone <repository-url>
+   cd chaboat_flow_builder
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Install dependencies:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# -Chatbotflowbuilder
+   The application will be available at [http://localhost:3000](http://localhost:3000)
+
+### Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+The build artifacts will be stored in the `build/` directory.
+
+## Usage
+
+1. **Adding Nodes**: Drag node types from the Nodes Panel on the right side to the canvas.
+2. **Connecting Nodes**: Click and drag from one node's handle to another node's handle to create connections.
+3. **Editing Nodes**: Click on a node to open the Settings Panel where you can edit the node's content.
+4. **Saving Flow**: Click the "Save Changes" button to validate and save your flow configuration.
+
+## Styling
+
+The project uses Tailwind CSS for styling. The main configuration is in `tailwind.config.js` and global styles are in `src/index.css`.
+
+## Future Enhancements
+
+- Additional node types (buttons, quick replies, media, etc.)
+- Flow validation and testing
+- Import/export functionality
+- Integration with popular chatbot platforms

@@ -190,18 +190,19 @@ const FlowBuilder: React.FC = () => {
             <Background />
           </ReactFlow>
           
-          <button 
-            onClick={handleSave}
-            className="absolute top-5 right-[280px] py-2 px-4 bg-blue-500 text-white border-none rounded text-sm cursor-pointer z-10 hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed"
-          >
-            Save Changes
-          </button>
+          
           <div 
             className={`absolute top-[70px] right-[280px] p-2.5 px-4 bg-red-50 text-red-700 rounded text-sm z-10 shadow-sm transition-opacity duration-300 ${error ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
           >
             {error}
           </div>
         </div>
+        <button
+          onClick={handleSave}
+          className="absolute top-2 right-[280px] py-2 px-4 bg-blue-500 text-white border-none rounded text-sm cursor-pointer z-10 hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed"
+        >
+          Save Changes
+        </button>
         
         {selectedNode ? (
           <SettingsPanel
