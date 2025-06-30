@@ -49,7 +49,7 @@ const FlowChart: React.FC = () => {
   );
 
   return (
-    <div style={{ width: '100%', height: '500px' }}>
+    <div style={{ width: '90%', height: '100%' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -59,9 +59,13 @@ const FlowChart: React.FC = () => {
         fitView
       >
         <Controls />
-        <MiniMap />
+        {/* <MiniMap /> */}
+        
         <Background color="#aaa" gap={16} />
       </ReactFlow>
+      <div className='w-full h-full border border-red-500'>
+
+      </div>
     </div>
   );
 };
